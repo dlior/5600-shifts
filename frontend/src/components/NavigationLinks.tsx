@@ -1,9 +1,10 @@
 import { Box, Flex, Link } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
 
 const navigation = [
-  { name: 'Dashboard', href: '#' },
-  { name: 'Team', href: '#' },
-  { name: 'Calendar', href: '#' },
+  { name: 'Dashboard', path: '/' },
+  { name: 'Team', path: '/team' },
+  { name: 'Calendar', path: '/calander' },
 ];
 
 const NavigationLinks = ({ mobile }: { mobile: boolean }) => {
@@ -13,6 +14,8 @@ const NavigationLinks = ({ mobile }: { mobile: boolean }) => {
         {navigation.map((item) => (
           <Link
             key={item.name}
+            as={RouterLink}
+            to={item.path}
             px={3}
             py={2}
             rounded={'md'}

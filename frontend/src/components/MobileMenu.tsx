@@ -12,12 +12,12 @@ import {
   IconButton,
   Box,
 } from '@chakra-ui/react';
-import { HiMenu } from 'react-icons/hi';
+import { FaBars } from 'react-icons/fa';
 import { useRef } from 'react';
 import Logo from './Logo';
 import NavigationLinks from './NavigationLinks';
 
-const MobileMenu = () => {
+const MobileMenu = ({ colorMode }: { colorMode: string }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef(null);
 
@@ -26,21 +26,20 @@ const MobileMenu = () => {
       <IconButton
         aria-label="menu button"
         ref={btnRef}
-        icon={<HiMenu />}
+        icon={<FaBars />}
         isRound={true}
         onClick={onOpen}
-        bgColor={'gray.800'}
+        bgColor={colorMode == 'light' ? 'gray.700' : 'gray.900'}
         color={'white'}
-        size={'md'}
-        _hover={{ bgColor: 'gray.700' }}>
+        size={'md'}>
         Open
       </IconButton>
       <Drawer
         isOpen={isOpen}
-        placement={'right'}
+        placement={'top'}
         onClose={onClose}
         finalFocusRef={btnRef}
-        size={'lg'}
+        size={'xs'}
         closeOnEsc>
         <DrawerOverlay />
         <DrawerContent bgColor={'white'} px={3} py={1}>
