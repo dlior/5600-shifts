@@ -11,10 +11,10 @@ const DarkModeToggle = ({ colorMode, toggleColorMode }: DarkModeProps) => {
     <IconButton
       aria-label="color mode"
       isRound={true}
-      size={'md'}
-      bgColor={colorMode == 'light' ? 'gray.700' : 'gray.900'}
-      color={'white'}
-      _hover={{ bgColor: colorMode == 'light' ? 'gray.900' : 'gray.700' }}
+      size="md"
+      bgColor="gray.700"
+      _hover={{ bgColor: 'gray.900' }}
+      color="white"
       onClick={toggleColorMode}
       icon={colorMode == 'light' ? <FaMoon /> : <FaSun />}></IconButton>
   );

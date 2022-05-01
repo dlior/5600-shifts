@@ -1,5 +1,11 @@
+import Navbar from '../components/Navbar';
+
 const Team = () => {
-  return <div>Team</div>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default Team;

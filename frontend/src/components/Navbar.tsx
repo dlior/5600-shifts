@@ -11,33 +11,33 @@ const Navbar = () => {
 
   return isLargerThanMedium ? (
     <Flex
-      as={'header'}
-      bgColor={colorMode == 'light' ? 'gray.700' : 'gray.900'}
+      as="header"
+      bgColor="#1A202C"
       h={14}
       px={24}
-      mx={'auto'}
-      justify={'space-between'}
-      align={'center'}>
+      mx="auto"
+      justify="space-between"
+      align="center">
       <HStack spacing={12}>
         <Logo />
         <NavigationLinks mobile={false} />
       </HStack>
       <HStack spacing={6}>
-        <UserAvatar />
         <DarkModeToggle
           colorMode={colorMode}
           toggleColorMode={toggleColorMode}
         />
+        <UserAvatar />
       </HStack>
     </Flex>
   ) : (
     <Flex
-      as={'header'}
-      bgColor={colorMode == 'light' ? 'gray.700' : 'gray.900'}
+      as="header"
+      bgColor="#1A202C"
       h={14}
       px={6}
-      justify={'space-between'}
-      align={'center'}>
+      justify="space-between"
+      align="center">
       <Logo />
       <HStack>
         <DarkModeToggle

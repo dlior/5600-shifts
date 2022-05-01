@@ -1,5 +1,11 @@
+import Navbar from '../components/Navbar';
+
 const Calander = () => {
-  return <div>Calander</div>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default Calander;

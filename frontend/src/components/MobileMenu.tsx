@@ -11,6 +11,7 @@ import {
   Input,
   IconButton,
   Box,
+  Flex,
 } from '@chakra-ui/react';
 import { FaBars } from 'react-icons/fa';
 import { useRef } from 'react';
@@ -29,32 +30,32 @@ const MobileMenu = ({ colorMode }: { colorMode: string }) => {
         icon={<FaBars />}
         isRound={true}
         onClick={onOpen}
-        bgColor={colorMode == 'light' ? 'gray.700' : 'gray.900'}
-        color={'white'}
-        size={'md'}>
+        bgColor="gray.700"
+        color="white"
+        size="md">
         Open
       </IconButton>
       <Drawer
         isOpen={isOpen}
-        placement={'top'}
+        placement="top"
         onClose={onClose}
         finalFocusRef={btnRef}
-        size={'xs'}
+        size="sm"
         closeOnEsc>
         <DrawerOverlay />
-        <DrawerContent bgColor={'white'} px={3} py={1}>
-          <Box px={3} py={2}>
-            <Logo />
-          </Box>
-          <DrawerCloseButton
-            bgColor={'gray.800'}
-            color={'white'}
-            _hover={{ bgColor: 'gray.700' }}
-            size={'md'}
-            p={5}
-            mr={3}
-            style={{ borderRadius: '100%' }}
-          />
+        <DrawerContent>
+          <Flex bgColor="#1A202C" w={'100%'} px={3} py={1}>
+            <Box px={3} py={2}>
+              <Logo />
+            </Box>
+            <DrawerCloseButton
+              bgColor="gray.700"
+              color="white"
+              p={5}
+              mr={3}
+              style={{ borderRadius: '100%' }}
+            />
+          </Flex>
           {/* <DrawerHeader>Create your account</DrawerHeader> */}
           <DrawerHeader>
             <NavigationLinks mobile={true} />
@@ -65,10 +66,10 @@ const MobileMenu = ({ colorMode }: { colorMode: string }) => {
           </DrawerBody>
 
           <DrawerFooter>
-            <Button variant={'outline'} mr={3} onClick={onClose}>
+            <Button variant="outline" mr={3} onClick={onClose}>
               Cancel
             </Button>
-            <Button colorScheme={'blue'}>Save</Button>
+            <Button colorScheme="blue">Save</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

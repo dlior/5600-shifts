@@ -6,10 +6,14 @@ const Logo = () => {
 
   return isLargerThanMedium ? (
     <Flex>
-      <Flex justify={'center'} align={'center'}>
+      <Flex justify="center" align="center">
         <Image src={logo} alt="logo" w={8} h={8} mr={2} />
-        <Text color={'white'} fontWeight={'semibold'} fontSize={'lg'}>
-          5600 Shifts
+        <Text
+          color="white"
+          fontWeight="semibold"
+          fontSize="lg"
+          fontFamily="Montserrat">
+          5600 SHIFTS
         </Text>
       </Flex>
     </Flex>

@@ -7,8 +7,16 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/team" element={<Team />} />
-      <Route path="/calander" element={<Calander />} />
+      <Route path="team" element={<Team />} />
+      <Route path="calander" element={<Calander />} />
+      <Route
+        path="*"
+        element={
+          <main style={{ padding: '1rem' }}>
+            <p>404</p>
+          </main>
+        }
+      />
     </Routes>
   );
 };
