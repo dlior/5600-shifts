@@ -22,9 +22,6 @@ const NavigationLinks = ({ mobile }: { mobile: boolean }) => {
             color="white"
             fontSize="sm"
             fontWeight="semibold"
-            style={{
-              textDecoration: 'none',
-            }}
             _hover={{ backgroundColor: 'gray.600' }}>
             {item.name}
           </Link>

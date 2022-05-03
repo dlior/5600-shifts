@@ -17,7 +17,8 @@ const Navbar = () => {
       px={24}
       mx="auto"
       justify="space-between"
-      align="center">
+      align="center"
+      style={{ borderBottom: '5px solid #BE911F' }}>
       <HStack spacing={12}>
         <Logo />
         <NavigationLinks mobile={false} />
@@ -37,7 +38,8 @@ const Navbar = () => {
       h={14}
       px={6}
       justify="space-between"
-      align="center">
+      align="center"
+      style={{ borderBottom: '5px solid #BE911F' }}>
       <Logo />
       <HStack>
         <DarkModeToggle

@@ -1,26 +1,44 @@
-import { Grid, GridItem, Text } from '@chakra-ui/react';
+import {
+  Table,
+  TableCaption,
+  TableContainer,
+  Tbody,
+  Td,
+  Tfoot,
+  Th,
+  Thead,
+  Tr,
+} from '@chakra-ui/react';
 
 const Shifts = () => {
   return (
-    <Grid templateColumns="repeat(5, 1fr)" gap={0.5} mt={10} w="80vw" mx="auto">
-      <GridItem
-        w="100%"
-        h="10"
-        bg="teal.500"
-        style={{ borderRadius: '5px 0 0 5px' }}
-      />
-      <GridItem w="100%" h="10" bg="teal.500" justifySelf="center">
-        <Text>Sun</Text>
-      </GridItem>
-      <GridItem w="100%" h="10" bg="teal.500" />
-      <GridItem w="100%" h="10" bg="teal.500" />
-      <GridItem
-        w="100%"
-        h="10"
-        bg="teal.500"
-        style={{ borderRadius: '0 5px 5px 0' }}
-      />
-    </Grid>
+    <TableContainer w="80vw" mx="auto" mt={16}>
+      <Table variant="simple">
+        <Thead>
+          <Tr>
+            <Th>Employee Name</Th>
+            <Th>Sun</Th>
+            <Th>Mon</Th>
+            <Th>Tue</Th>
+            <Th>Wed</Th>
+            <Th>Thu</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          <Tr>
+            <Td>Lior Degu</Td>
+            <Td>-</Td>
+            <Td>07:30 - 19:30</Td>
+            <Td>07:30 - 19:30</Td>
+            <Td>07:30 - 19:30</Td>
+            <Td>-</Td>
+          </Tr>
+        </Tbody>
+        <Tfoot>
+          <Tr></Tr>
+        </Tfoot>
+      </Table>
+    </TableContainer>
   );
 };
 
