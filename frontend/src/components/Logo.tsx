@@ -12,8 +12,9 @@ const Logo = () => {
           color="white"
           fontWeight="semibold"
           fontSize="lg"
-          fontFamily="Montserrat">
-          5600 SHIFTS
+          fontFamily="Montserrat"
+          casing="uppercase">
+          5600 shifts
         </Text>
       </Flex>
     </Flex>
