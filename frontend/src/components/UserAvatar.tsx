@@ -8,7 +8,6 @@ const UserAvatar = () => {
           <Avatar
             name="Dan Abrahmov"
             src="https://bit.ly/dan-abramov"
-            // size={'sm'}
             w={10}
             h={10}
           />
