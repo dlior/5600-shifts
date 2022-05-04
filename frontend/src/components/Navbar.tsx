@@ -19,6 +19,8 @@ const Navbar = () => {
   return (
     <Flex
       as="header"
+      pos="sticky"
+      top={0}
       bgColor="#1A202C"
       h={14}
       px={isLargerThanMedium ? 24 : 6}
