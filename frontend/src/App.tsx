@@ -1,14 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Team from './pages/Team';
-import Calander from './pages/Calander';
+import Calendar from './pages/Calendar';
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="team" element={<Team />} />
-      <Route path="calander" element={<Calander />} />
+      <Route path="calendar" element={<Calendar />} />
       <Route
         path="*"
         element={
