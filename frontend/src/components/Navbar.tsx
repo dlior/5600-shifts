@@ -28,7 +28,7 @@ const Navbar = () => {
           colorMode={colorMode}
           toggleColorMode={toggleColorMode}
         />
-        <UserAvatar />
+        <UserAvatar size="sm" />
       </HStack>
     </Flex>
   ) : (

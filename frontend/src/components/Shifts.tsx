@@ -1,4 +1,6 @@
 import {
+  Flex,
+  HStack,
   Table,
   TableCaption,
   TableContainer,
@@ -8,9 +10,12 @@ import {
   Th,
   Thead,
   Tr,
+  VStack,
+  Text,
 } from '@chakra-ui/react';
 
 import '../index.css';
+import UserAvatar from './UserAvatar';
 
 const Shifts = () => {
   return (
@@ -19,7 +24,7 @@ const Shifts = () => {
         <Thead>
           <Tr>
             <Th>Employee Name</Th>
-            <Th className="calendar-day">Sun</Th>
+            <Th justifyContent="start">Sun</Th>
             <Th className="calendar-day">Mon</Th>
             <Th className="calendar-day">Tue</Th>
             <Th className="calendar-day">Wed</Th>
@@ -28,7 +33,12 @@ const Shifts = () => {
         </Thead>
         <Tbody>
           <Tr>
-            <Td>Lior Degu</Td>
+            <Td>
+              <HStack justify="start" align="center" spacing={2}>
+                <UserAvatar size="sm" />
+                <Text>Lior Degu</Text>
+              </HStack>
+            </Td>
             <Td className="calendar-hours">-</Td>
             <Td className="calendar-hours">07:30 - 19:30</Td>
             <Td className="calendar-hours">07:30 - 19:30</Td>

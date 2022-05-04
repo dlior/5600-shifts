@@ -32,7 +32,7 @@ const MobileMenu = ({ colorMode }: { colorMode: string }) => {
         onClick={onOpen}
         bgColor="gray.700"
         color="white"
-        size="md">
+        size="sm">
         Open
       </IconButton>
       <Drawer
@@ -44,20 +44,17 @@ const MobileMenu = ({ colorMode }: { colorMode: string }) => {
         closeOnEsc>
         <DrawerOverlay />
         <DrawerContent>
-          <Flex bgColor="#1A202C" w={'100%'} px={3} py={1}>
-            <Box px={3} py={2}>
-              <Logo />
-            </Box>
+          <Flex bgColor="#1A202C" w={'100%'} px={6} py={3}>
+            <Logo />
             <DrawerCloseButton
               bgColor="gray.700"
+              rounded="full"
               color="white"
-              p={5}
               mr={3}
-              style={{ borderRadius: '100%' }}
+              mt={1}
             />
           </Flex>
-          {/* <DrawerHeader>Create your account</DrawerHeader> */}
-          <DrawerHeader>
+          <DrawerHeader style={{ borderTop: '5px solid #BE911F' }}>
             <NavigationLinks mobile={true} />
           </DrawerHeader>
 
