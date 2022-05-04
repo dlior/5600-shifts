@@ -13,9 +13,8 @@ import {
   VStack,
   Text,
 } from '@chakra-ui/react';
-
-import '../index.css';
 import UserAvatar from './UserAvatar';
+import '../style/index.scss';
 
 const Shifts = () => {
   return (
@@ -24,11 +23,11 @@ const Shifts = () => {
         <Thead>
           <Tr>
             <Th>Employee Name</Th>
-            <Th justifyContent="start">Sun</Th>
-            <Th className="calendar-day">Mon</Th>
-            <Th className="calendar-day">Tue</Th>
-            <Th className="calendar-day">Wed</Th>
-            <Th className="calendar-day">Thu</Th>
+            <Th textAlign="center">Sun</Th>
+            <Th textAlign="center">Mon</Th>
+            <Th textAlign="center">Tue</Th>
+            <Th textAlign="center">Wed</Th>
+            <Th textAlign="center">Thu</Th>
           </Tr>
         </Thead>
         <Tbody>
@@ -36,14 +35,24 @@ const Shifts = () => {
             <Td>
               <HStack justify="start" align="center" spacing={2}>
                 <UserAvatar size="sm" />
-                <Text>Lior Degu</Text>
+                <Text fontSize="sm">Lior Degu</Text>
               </HStack>
             </Td>
-            <Td className="calendar-hours">-</Td>
-            <Td className="calendar-hours">07:30 - 19:30</Td>
-            <Td className="calendar-hours">07:30 - 19:30</Td>
-            <Td className="calendar-hours">07:30 - 19:30</Td>
-            <Td className="calendar-hours">-</Td>
+            <Td fontSize="sm" textAlign="center">
+              -
+            </Td>
+            <Td fontSize="sm" textAlign="center">
+              07:30 - 19:30, 08:30 - 12:40
+            </Td>
+            <Td fontSize="sm" textAlign="center">
+              07:30 - 19:30
+            </Td>
+            <Td fontSize="sm" textAlign="center">
+              07:30 - 19:30
+            </Td>
+            <Td fontSize="sm" textAlign="center">
+              -
+            </Td>
           </Tr>
         </Tbody>
         <Tfoot>

@@ -4,7 +4,7 @@ import { Link as RouterLink } from 'react-router-dom';
 const navigation = [
   { name: 'Dashboard', path: '/' },
   { name: 'Team', path: '/team' },
-  { name: 'Calendar', path: '/calander' },
+  { name: 'Calendar', path: '/calendar' },
 ];
 
 const NavigationLinks = ({ mobile }: { mobile: boolean }) => {

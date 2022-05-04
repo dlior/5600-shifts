@@ -10,7 +10,6 @@ import {
   Button,
   Input,
   IconButton,
-  Box,
   Flex,
 } from '@chakra-ui/react';
 import { FaBars } from 'react-icons/fa';

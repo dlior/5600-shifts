@@ -1,12 +1,10 @@
-import { Flex, Image, Text, useMediaQuery } from '@chakra-ui/react';
+import { Flex, Hide, Image, Show, Text } from '@chakra-ui/react';
 import logo from '../assets/logo.png';
 
 const Logo = () => {
-  const [isLargerThanMedium] = useMediaQuery('(min-width: 786px)');
-
-  return isLargerThanMedium ? (
-    <Flex>
-      <Flex justify="center" align="center">
+  return (
+    <Flex justify="center" align="center">
+      <Show above="md">
         <Image src={logo} alt="logo" w={8} h={8} mr={2} />
         <Text
           color="white"
@@ -16,10 +14,11 @@ const Logo = () => {
           casing="uppercase">
           5600 shifts
         </Text>
-      </Flex>
+      </Show>
+      <Hide above="md">
+        <Image src={logo} alt="logo" w={8} h={8} mr={2} />
+      </Hide>
     </Flex>
-  ) : (
-    <Image src={logo} alt="logo" w={8} h={8} mr={2} />
   );
 };
 
