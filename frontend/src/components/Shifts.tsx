@@ -11,97 +11,97 @@ import {
   Tr,
   Text,
   Divider,
+  useColorMode,
+  Box,
 } from '@chakra-ui/react';
 import UserAvatar from './UserAvatar';
 import '../style/index.scss';
 
 const weekDays = ['sun', 'mon', 'tue', 'wed', 'thu'];
+const weekDaysColors = [
+  'teal.500',
+  'blue.500',
+  'cyan.500',
+  'purple.500',
+  'pink.500',
+];
+
+import data from '../assets/mock_data/mock_data.json';
 
 const Shifts = () => {
+  const { colorMode } = useColorMode();
+
   return (
-    <TableContainer w="80vw" mx="auto" mt={16}>
+    <TableContainer w={['95vw', '80vw']} mx="auto" mt={16}>
       <Table variant="simple" style={{ borderCollapse: 'separate' }}>
         <Thead>
           <Tr>
-            <Th pos="sticky" left={0} bgColor="whiteAlpha.900" zIndex={9999}>
+            <Th
+              pos="sticky"
+              left={0}
+              bgColor={colorMode == 'light' ? 'white' : '#1A202C'}
+              zIndex={1}>
               Employee Name
             </Th>
-            {weekDays.map((day, idx) => (
-              <Th key={idx} textAlign="center">
-                {day}
-              </Th>
-            ))}
+            {weekDays.map((day) => {
+              return (
+                <Th key={day} textAlign="center">
+                  {day}
+                </Th>
+              );
+            })}
           </Tr>
         </Thead>
         <Tbody>
-          {[1, 2, 3].map((i, j) => {
+          {data.scheduledShifts.map((shift) => {
             return (
-              <Tr key={j}>
+              <Tr key={shift.employeeName}>
                 <Td
-                  w={0.5}
+                  w={0.1}
                   pos="sticky"
                   left={0}
-                  bgColor="whiteAlpha.900"
-                  zIndex={9999}>
+                  bgColor={colorMode == 'light' ? 'white' : '#1A202C'}
+                  zIndex={1}>
                   <HStack justify="start" align="center" spacing={2}>
                     <UserAvatar size="sm" />
-                    <Text fontSize="sm" fontWeight="semibold">
-                      Lior Degu
+                    <Text fontSize="sm" fontWeight="medium">
+                      {shift.employeeName}
                     </Text>
                   </HStack>
                 </Td>
-                <Td
-                  w={0.5}
-                  fontSize="sm"
-                  textAlign="center"
-                  bgColor="teal.500"
-                  color="white"
-                  fontWeight="bold"
-                  rounded="md">
-                  -
-                </Td>
-                <Td
-                  w="0.5"
-                  fontSize="sm"
-                  textAlign="center"
-                  bgColor="blue.500"
-                  color="white"
-                  fontWeight="bold"
-                  rounded="md">
-                  07:30 - 19:30
-                  <Divider orientation="horizontal" my={1} />
-                  08:30 - 12:40
-                </Td>
-                <Td
-                  w={0.5}
-                  fontSize="sm"
-                  textAlign="center"
-                  bgColor="cyan.500"
-                  color="white"
-                  fontWeight="bold"
-                  rounded="md">
-                  07:30 - 19:30
-                </Td>
-                <Td
-                  w={0.5}
-                  fontSize="sm"
-                  textAlign="center"
-                  bgColor="purple.500"
-                  color="white"
-                  fontWeight="bold"
-                  rounded="md">
-                  07:30 - 19:30
-                </Td>
-                <Td
-                  w={0.5}
-                  fontSize="sm"
-                  textAlign="center"
-                  bgColor="pink.500"
-                  color="white"
-                  fontWeight="bold"
-                  rounded="md">
-                  -
-                </Td>
+                {shift.employeeShifts.map((item, i) => {
+                  return (
+                    <Td
+                      key={i}
+                      w={0.5}
+                      p={2}
+                      fontSize="sm"
+                      textAlign="center"
+                      bgColor={weekDaysColors[i]}
+                      color="white"
+                      fontWeight="bold"
+                      rounded="md">
+                      {item.length == 0
+                        ? '-'
+                        : item.length == 1
+                        ? item
+                        : item.map((split, i, arr) => {
+                            return (
+                              <Box key={i + shift.employeeName}>
+                                <Text>{split}</Text>
+                                {i < arr.length - 1 && (
+                                  <Divider
+                                    key={i}
+                                    orientation="horizontal"
+                                    my={1}
+                                  />
+                                )}
+                              </Box>
+                            );
+                          })}
+                    </Td>
+                  );
+                })}
               </Tr>
             );
           })}
