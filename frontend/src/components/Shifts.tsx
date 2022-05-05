@@ -1,11 +1,9 @@
 import {
   HStack,
   Table,
-  TableCaption,
   TableContainer,
   Tbody,
   Td,
-  Tfoot,
   Th,
   Thead,
   Tr,
@@ -13,8 +11,7 @@ import {
   Divider,
   useColorMode,
   Box,
-  Flex,
-  TableCaption,
+  VStack,
 } from '@chakra-ui/react';
 import UserAvatar from './UserAvatar';
 import '../style/index.scss';
@@ -33,19 +30,13 @@ const Shifts = () => {
   const { colorMode } = useColorMode();
 
   return (
-    <>
-      <TableContainer w={['95vw', '80vw']} mx="auto" mt={16}>
+    <VStack>
+      <Box fontSize="lg" fontWeight="bold" w={['95vw', '80vw']} pl={6} mt={10}>
+        <Text>Shifts</Text>
+        <Text fontSize="sm">01.01.22 - 05.01.22</Text>
+      </Box>
+      <TableContainer w={['95vw', '80vw']} mx="auto" mt={10} overflowY="hidden">
         <Table variant="simple" style={{ borderCollapse: 'separate' }}>
-          <TableCaption
-            zIndex={2}
-            placement="top"
-            textAlign="left"
-            pos="fixed"
-            top={16}>
-            <Text fontSize="md" casing="capitalize">
-              shifts for 01.01.22 - 05.01.22
-            </Text>
-          </TableCaption>
           <Thead>
             <Tr>
               <Th
@@ -121,12 +112,9 @@ const Shifts = () => {
               );
             })}
           </Tbody>
-          <Tfoot>
-            <Tr></Tr>
-          </Tfoot>
         </Table>
       </TableContainer>
-    </>
+    </VStack>
   );
 };
 
