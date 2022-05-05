@@ -12,10 +12,14 @@ import {
   useColorMode,
   Box,
   VStack,
+  Flex,
+  IconButton,
+  Center,
 } from '@chakra-ui/react';
 import UserAvatar from './UserAvatar';
 import '../style/index.scss';
 import data from '../assets/mock_data/mock_data.json';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const weekDays = ['sun', 'mon', 'tue', 'wed', 'thu'];
 const weekDaysColors = [
@@ -31,10 +35,36 @@ const Shifts = () => {
 
   return (
     <VStack>
-      <Box fontSize="lg" fontWeight="bold" w={['95vw', '80vw']} pl={6} mt={10}>
-        <Text>Shifts</Text>
-        <Text fontSize="sm">01.01.22 - 05.01.22</Text>
-      </Box>
+      <Flex w={['95vw', '80vw']} justify="space-between">
+        <Box fontSize="lg" fontWeight="bold" pl={6} mt={10}>
+          <Text>Shifts</Text>
+          <Text fontSize="sm">01.01.22 - 05.01.22</Text>
+        </Box>
+        <Box mt={10} justifyContent="center" alignContent="center">
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            my={2}
+            mx="auto">
+            <IconButton
+              aria-label="chevron-left"
+              bgColor="transparent"
+              isRound
+              size="sm"
+              mr={2}
+              icon={<FaChevronLeft />}
+            />
+            <IconButton
+              aria-label="chevron-right"
+              bgColor="transparent"
+              isRound
+              size="sm"
+              icon={<FaChevronRight />}
+            />
+          </Box>
+        </Box>
+      </Flex>
       <TableContainer w={['95vw', '80vw']} mx="auto" mt={10} overflowY="hidden">
         <Table variant="simple" style={{ borderCollapse: 'separate' }}>
           <Thead>
