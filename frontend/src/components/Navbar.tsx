@@ -18,6 +18,7 @@ const Navbar = () => {
 
   return (
     <Flex
+      className="noprint"
       zIndex={2}
       as="header"
       pos="sticky"
