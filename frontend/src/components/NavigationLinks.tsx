@@ -13,15 +13,18 @@ const NavigationLinks = ({ mobile }: { mobile: boolean }) => {
       <Flex justify="center" align="center">
         {navigation.map((item) => (
           <Link
+            id="navigation-link-text"
             key={item.name}
             as={RouterLink}
             to={item.path}
             px={3}
             py={2}
+            ml={1}
             rounded="md"
             color="white"
             fontSize="sm"
-            fontWeight="semibold"
+            fontWeight="medium"
+            fontFamily="Montserrat"
             _hover={{ backgroundColor: 'gray.600' }}>
             {item.name}
           </Link>

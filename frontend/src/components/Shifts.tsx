@@ -42,7 +42,7 @@ const Shifts = () => {
               shifts
             </Text>
             <Text fontSize="sm" fontWeight="bold">
-              01.01.22 - 05.01.22
+              01.05.22 - 05.05.22
             </Text>
           </Box>
 

@@ -5,9 +5,10 @@ const Logo = () => {
   return (
     <Flex justify="center" align="center">
       <Show above="md">
-        <HStack spacing={2}>
+        <HStack>
           <Image src={logo} alt="logo" w={8} h={8} />
           <Text
+            id="logo-text"
             color="white"
             fontWeight="semibold"
             fontSize="lg"

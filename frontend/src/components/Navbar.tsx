@@ -1,7 +1,6 @@
 import {
   Flex,
   HStack,
-  useMediaQuery,
   useColorMode,
   Hide,
   Show,
@@ -12,6 +11,7 @@ import DarkModeToggle from './DarkModeToggle';
 import Logo from './Logo';
 import MobileMenu from './MobileMenu';
 import NavigationLinks from './NavigationLinks';
+import RequestModal from './RequestModal';
 import UserAvatar from './UserAvatar';
 
 const Navbar = () => {
@@ -32,11 +32,12 @@ const Navbar = () => {
       <Container maxW="7xl">
         <Flex justify="space-between" align="stretch">
           <Show above="md">
-            <HStack spacing={12}>
+            <HStack spacing={7}>
               <Logo />
               <NavigationLinks mobile={false} />
             </HStack>
             <HStack spacing={6}>
+              <RequestModal />
               <DarkModeToggle
                 colorMode={colorMode}
                 toggleColorMode={toggleColorMode}
