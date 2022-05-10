@@ -6,12 +6,13 @@ import {
   Show,
   Container,
   Box,
+  Button,
 } from '@chakra-ui/react';
+import { FaPlus } from 'react-icons/fa';
 import DarkModeToggle from './DarkModeToggle';
 import Logo from './Logo';
 import MobileMenu from './MobileMenu';
 import NavigationLinks from './NavigationLinks';
-import RequestModal from './RequestModal';
 import UserAvatar from './UserAvatar';
 
 const Navbar = () => {
@@ -37,7 +38,16 @@ const Navbar = () => {
               <NavigationLinks mobile={false} />
             </HStack>
             <HStack spacing={6}>
-              <RequestModal />
+              {/* <Button
+                bgColor="#303F9F"
+                color="white"
+                size="sm"
+                fontFamily="Montserrat"
+                _hover={{ backgroundColor: '#4338CA' }}
+                _active={{ backgroundColor: '#4338CA' }}
+                leftIcon={<FaPlus />}>
+                New request
+              </Button> */}
               <DarkModeToggle
                 colorMode={colorMode}
                 toggleColorMode={toggleColorMode}

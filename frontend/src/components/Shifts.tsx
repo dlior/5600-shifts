@@ -11,7 +11,6 @@ import {
   Divider,
   useColorMode,
   Box,
-  VStack,
   Flex,
   IconButton,
   Container,
@@ -35,7 +34,7 @@ const Shifts = () => {
 
   return (
     <Container maxW="7xl">
-      <Box mt={14}>
+      <Box mt={10}>
         <Flex justify="space-between">
           <Box>
             <Text fontSize="lg" fontWeight="bold" casing="capitalize">

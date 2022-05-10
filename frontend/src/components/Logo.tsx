@@ -12,7 +12,6 @@ const Logo = () => {
             color="white"
             fontWeight="semibold"
             fontSize="lg"
-            fontFamily="Montserrat"
             casing="uppercase">
             5600 shifts
           </Text>
