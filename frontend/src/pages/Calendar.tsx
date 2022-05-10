@@ -1,3 +1,4 @@
+import CalendarGrid from '../components/CalendarGrid';
 import Navbar from '../components/Navbar';
 
 const Calendar = () => {
@@ -5,6 +6,7 @@ const Calendar = () => {
   return (
     <>
       <Navbar />
+      <CalendarGrid />
     </>
   );
 };
