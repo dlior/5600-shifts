@@ -1,4 +1,5 @@
-import { Flex, Hide, HStack, Image, Show, Text } from '@chakra-ui/react';
+import { Flex, Hide, HStack, Image, Show, Text, Link } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
 const Logo = () => {
@@ -6,7 +7,9 @@ const Logo = () => {
     <Flex justify="center" align="center">
       <Show above="md">
         <HStack>
-          <Image src={logo} alt="logo" w={8} h={8} />
+          <Link as={RouterLink} to="/">
+            <Image src={logo} alt="logo" w={8} h={8} />
+          </Link>
           <Text
             id="logo-text"
             color="white"
@@ -18,7 +21,9 @@ const Logo = () => {
         </HStack>
       </Show>
       <Hide above="md">
-        <Image src={logo} alt="logo" w={8} h={8} />
+        <Link as={RouterLink} to="/">
+          <Image src={logo} alt="logo" w={8} h={8} />
+        </Link>
       </Hide>
     </Flex>
   );
