@@ -3,8 +3,6 @@ import { Container, Divider, SimpleGrid, Text } from '@chakra-ui/react';
 const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const days = Array.from(Array(31).keys());
 
-console.log(days);
-
 const CalendarGrid = () => {
   return (
     <Container maxW="7xl">
@@ -20,8 +18,8 @@ const CalendarGrid = () => {
         <SimpleGrid columns={7} mt={2}>
           {days.map((day, i) => (
             <Text
-              fontWeight="semibold"
               key={i}
+              fontWeight="semibold"
               fontSize="sm"
               color="gray.500"
               lineHeight={6}
