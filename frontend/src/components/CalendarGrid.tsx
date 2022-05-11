@@ -1,7 +1,11 @@
-import { Container, Divider, SimpleGrid, Text } from '@chakra-ui/react';
-
-const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-const days = Array.from(Array(31).keys());
+import { Box, Container, Divider, SimpleGrid, Text } from '@chakra-ui/react';
+import {
+  weekDays,
+  days,
+  currentDay,
+  currentMonth,
+  currentYear,
+} from '../utils';
 
 const CalendarGrid = () => {
   return (
@@ -16,18 +20,36 @@ const CalendarGrid = () => {
           ))}
         </SimpleGrid>
         <SimpleGrid columns={7} mt={2}>
-          {days.map((day, i) => (
-            <Text
-              key={i}
-              fontWeight="semibold"
-              fontSize="sm"
-              color="gray.500"
-              lineHeight={6}
-              align="center">
-              {i > 6 && <Divider orientation="horizontal" my={2} />}
-              {day + 1}
-            </Text>
-          ))}
+          {days.map((day, i) => {
+            return (
+              <Box key={i}>
+                {i > 6 && <Divider orientation="horizontal" my={2} />}
+                <Text
+                  as="time"
+                  display="block"
+                  dateTime={
+                    currentYear +
+                    '-' +
+                    ('0' + currentMonth).slice(-2) +
+                    '-' +
+                    ('0' + currentDay).slice(-2)
+                  }
+                  px={2}
+                  py={2}
+                  w={10}
+                  m="auto"
+                  fontWeight="semibold"
+                  fontSize="sm"
+                  lineHeight={6}
+                  color={day + 1 == currentDay ? 'white' : 'gray.500'}
+                  rounded={day + 1 == currentDay ? 'full' : ''}
+                  bgColor={day + 1 == currentDay ? 'purple.800' : ''}
+                  align="center">
+                  {day + 1}
+                </Text>
+              </Box>
+            );
+          })}
         </SimpleGrid>
       </SimpleGrid>
     </Container>
