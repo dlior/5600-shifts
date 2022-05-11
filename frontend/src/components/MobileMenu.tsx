@@ -12,12 +12,12 @@ import {
   IconButton,
   Flex,
 } from '@chakra-ui/react';
-import { FaBars } from 'react-icons/fa';
 import { useRef } from 'react';
-import Logo from './Logo';
+import { FaBars } from 'react-icons/fa';
 import NavigationLinks from './NavigationLinks';
+import Logo from './Logo';
 
-const MobileMenu = ({ colorMode }: { colorMode: string }) => {
+const MobileMenu = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef(null);
 
