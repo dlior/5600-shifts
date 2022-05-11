@@ -1,6 +1,6 @@
 import { Avatar, Flex, Wrap, WrapItem } from '@chakra-ui/react';
 
-const UserAvatar = ({ size }: { size: string }) => {
+const UserAvatar = () => {
   return (
     <Flex align="center">
       <Wrap>
@@ -8,7 +8,7 @@ const UserAvatar = ({ size }: { size: string }) => {
           <Avatar
             name="Dan Abrahmov"
             src="https://bit.ly/dan-abramov"
-            size={size}
+            size="sm"
           />
         </WrapItem>
       </Wrap>
