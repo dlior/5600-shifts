@@ -15,10 +15,10 @@ import {
   IconButton,
   Container,
 } from '@chakra-ui/react';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import UserAvatar from './UserAvatar';
 import '../style/index.scss';
 import data from '../assets/mock_data/mock_data.json';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const weekDays = ['sun', 'mon', 'tue', 'wed', 'thu'];
 const weekDaysColors = [
@@ -45,7 +45,7 @@ const Shifts = () => {
             </Text>
           </Box>
 
-          <Box mt={2}>
+          <Box mt={2} className="noprint">
             <IconButton
               aria-label="chevron-left"
               bgColor="transparent"
@@ -94,7 +94,7 @@ const Shifts = () => {
                       bgColor={colorMode == 'light' ? 'white' : '#1A202C'}
                       zIndex={1}>
                       <HStack justify="start" align="center" spacing={2}>
-                        <UserAvatar size="sm" />
+                        <UserAvatar />
                         <Text
                           fontSize="sm"
                           fontWeight="medium"
