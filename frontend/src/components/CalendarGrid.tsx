@@ -43,7 +43,7 @@ const CalendarGrid = () => {
                   lineHeight={6}
                   color={day + 1 == currentDay ? 'white' : 'gray.500'}
                   rounded={day + 1 == currentDay ? 'full' : ''}
-                  bgColor={day + 1 == currentDay ? 'purple.800' : ''}
+                  bgColor={day + 1 == currentDay ? 'black' : ''}
                   align="center">
                   {day + 1}
                 </Text>
