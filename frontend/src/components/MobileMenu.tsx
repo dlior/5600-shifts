@@ -46,6 +46,7 @@ const MobileMenu = () => {
           <Flex bgColor="#1A202C" w={'100%'} pl={4} py={2.5}>
             <Logo />
             <DrawerCloseButton
+              ref={btnRef}
               bgColor="gray.700"
               rounded="full"
               color="white"
