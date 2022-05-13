@@ -13,17 +13,17 @@ const CalendarGrid = () => {
       <Text mt={10}>May 2022</Text>
       <SimpleGrid columns={1}>
         <SimpleGrid columns={7} mt={4}>
-          {weekDays.map((day, i) => (
-            <Text key={i} fontSize="sm" lineHeight={6} align="center">
-              {day}
+          {weekDays.map((weekDay) => (
+            <Text key={weekDay} fontSize="sm" lineHeight={6} align="center">
+              {weekDay}
             </Text>
           ))}
         </SimpleGrid>
         <SimpleGrid columns={7} mt={2}>
-          {days.map((day, i) => {
+          {days.map((day) => {
             return (
-              <Box key={i}>
-                {i > 6 && <Divider orientation="horizontal" my={2} />}
+              <Box key={day}>
+                {day > 6 && <Divider orientation="horizontal" my={2} />}
                 <Text
                   as="time"
                   display="block"
@@ -32,11 +32,10 @@ const CalendarGrid = () => {
                     '-' +
                     ('0' + currentMonth).slice(-2) +
                     '-' +
-                    ('0' + currentDay).slice(-2)
+                    ('0' + (day + 1)).slice(-2)
                   }
-                  px={2}
-                  py={2}
-                  w={10}
+                  py={1}
+                  w={8}
                   m="auto"
                   fontWeight="semibold"
                   fontSize="sm"
