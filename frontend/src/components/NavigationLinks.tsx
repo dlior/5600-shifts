@@ -7,7 +7,7 @@ const navigation = [
   { name: 'Calendar', path: '/calendar' },
 ];
 
-const NavigationLinks = ({ mobile }: { mobile: boolean }) => {
+const NavigationLinks = () => {
   return (
     <Box as="nav">
       <Flex justify="center" align="center">
