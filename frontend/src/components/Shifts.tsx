@@ -19,7 +19,7 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import UserAvatar from './UserAvatar';
 import '../style/index.scss';
 import data from '../assets/mock_data/mock_data.json';
-import { workDays, workDaysColors } from '../utils';
+import { workingDays, workingDaysColors } from '../utils';
 
 const Shifts = () => {
   const { colorMode } = useColorMode();
@@ -66,7 +66,7 @@ const Shifts = () => {
                   zIndex={1}>
                   {/* Employee Name */}
                 </Th>
-                {workDays.map((day) => {
+                {workingDays.map((day) => {
                   return (
                     <Th key={day} textAlign="center">
                       {day}
@@ -103,7 +103,7 @@ const Shifts = () => {
                           p={2}
                           fontSize="sm"
                           textAlign="center"
-                          bgColor={workDaysColors[i]}
+                          bgColor={workingDaysColors[i]}
                           color="white"
                           fontWeight="bold"
                           rounded="md">
