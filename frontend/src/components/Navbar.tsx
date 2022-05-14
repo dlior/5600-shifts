@@ -33,7 +33,7 @@ const Navbar = () => {
           <Show above="md">
             <HStack spacing={7}>
               <Logo />
-              <NavigationLinks mobile={false} />
+              <NavigationLinks />
             </HStack>
             <HStack spacing={6}>
               <DarkModeToggle
