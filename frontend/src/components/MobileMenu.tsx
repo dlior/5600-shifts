@@ -55,7 +55,7 @@ const MobileMenu = () => {
             />
           </Flex>
           <DrawerHeader borderTop={'5px solid #BE911F'}>
-            <NavigationLinks mobile={true} />
+            <NavigationLinks />
           </DrawerHeader>
 
           <DrawerBody>
