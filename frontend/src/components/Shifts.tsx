@@ -55,7 +55,7 @@ const Shifts = () => {
             />
           </Box>
         </Flex>
-        <TableContainer mt={10} w="full">
+        <TableContainer mt={8} w="full">
           <Table variant="simple" style={{ borderCollapse: 'separate' }}>
             <Thead>
               <Tr>
@@ -120,6 +120,8 @@ const Shifts = () => {
                                         key={i}
                                         orientation="horizontal"
                                         my={1}
+                                        mx="auto"
+                                        w={['100%', '50%']}
                                       />
                                     )}
                                   </Box>
