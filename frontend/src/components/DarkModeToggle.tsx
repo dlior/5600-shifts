@@ -1,5 +1,5 @@
 import { IconButton } from '@chakra-ui/react';
-import { FaMoon, FaSun } from 'react-icons/fa';
+import { BsMoonStarsFill, BsSunFill } from 'react-icons/bs';
 
 type DarkModeProps = {
   colorMode: string;
@@ -16,7 +16,9 @@ const DarkModeToggle = ({ colorMode, toggleColorMode }: DarkModeProps) => {
       _hover={{ bgColor: 'gray.900' }}
       color="white"
       onClick={toggleColorMode}
-      icon={colorMode == 'light' ? <FaMoon /> : <FaSun />}></IconButton>
+      icon={
+        colorMode == 'light' ? <BsMoonStarsFill /> : <BsSunFill />
+      }></IconButton>
   );
 };
 
