@@ -9,6 +9,9 @@ import {
   Grid,
   GridItem,
   Center,
+  Stack,
+  Show,
+  Hide,
 } from '@chakra-ui/react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import {
@@ -25,9 +28,9 @@ const CalendarGrid = () => {
       <Grid
         templateColumns={{ sm: '1fr', md: 'repeat(2, 1fr)' }}
         gap={6}
-        alignItems="center">
+        mt={10}>
         <GridItem>
-          <Flex mt={10} justify="space-between" align="center">
+          <Flex justify="space-between" align="center">
             <Box>
               <Text fontSize="lg" fontWeight="bold" casing="capitalize">
                 May 2022
@@ -63,8 +66,6 @@ const CalendarGrid = () => {
                 {weekDay}
               </Text>
             ))}
-            {/* </SimpleGrid>
-        <SimpleGrid columns={7} mt={2}> */}
             {monthDays.map((day) => {
               return (
                 <Box key={day}>
@@ -96,18 +97,23 @@ const CalendarGrid = () => {
             })}
           </SimpleGrid>
         </GridItem>
-        <GridItem textAlign="center">
-          <Box bg="tomato">
-            <Text>Lior Degu</Text>
-            <Center>
-              <Divider
-                orientation="vertical"
-                size="2xl"
-                colorScheme="pink"
-                w={5}
-              />
-            </Center>
-          </Box>
+        <GridItem mt={1}>
+          <Show above="md">
+            <Box
+              as="section"
+              borderLeft={'0.1px solid #718096'}
+              h="100%"
+              ml={1}>
+              <Box>
+                <Text ml={6}>Schedule for current month</Text>
+              </Box>
+            </Box>
+          </Show>
+          <Hide above="md">
+            <Box>
+              <Text>Schedule for current month</Text>
+            </Box>
+          </Hide>
         </GridItem>
       </Grid>
     </Container>
