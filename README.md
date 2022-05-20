@@ -5,6 +5,6 @@ Stack = {<br />
 <strong>Frontend:</strong> React.js, TypeScript, ChakraUI, ...,<br /><strong>Backend:</strong> WIP...,<br />
 }
 
-Preview:<br />
+Teaser:<br />
 <a target="_blank" href="https://github.com/dlior/5600-shifts/blob/main/frontend/src/assets/screenshots/desktop.png">Desktop view</a><br />
 <a target="_blank" href="https://github.com/dlior/5600-shifts/blob/main/frontend/src/assets/screenshots/mobile.png">Mobile view</a>

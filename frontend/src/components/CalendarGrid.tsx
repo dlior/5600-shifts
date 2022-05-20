@@ -105,13 +105,13 @@ const CalendarGrid = () => {
               h="100%"
               ml={1}>
               <Box>
-                <Text ml={6}>Schedule for current month</Text>
+                <Text ml={8}>Upcoming shifts</Text>
               </Box>
             </Box>
           </Show>
           <Hide above="md">
             <Box>
-              <Text>Schedule for current month</Text>
+              <Text>Upcoming shifts</Text>
             </Box>
           </Hide>
         </GridItem>
