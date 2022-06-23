@@ -8,8 +8,6 @@ import {
   Text,
   Grid,
   GridItem,
-  Center,
-  Stack,
   Show,
   Hide,
 } from '@chakra-ui/react';
